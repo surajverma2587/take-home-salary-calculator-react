@@ -1,0 +1,39 @@
+:root {
+  --xiketic: #191528ff;
+  --dark-purple: #3c162fff;
+  --tyrian-purple: #5c162eff;
+  --claret: #7c162eff;
+  --xiketic-2: #110e1bff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--xiketic-2);
+  color: #ffffff;
+}
+
+.banner {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 20px;
+  background-color: var(--tyrian-purple);
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+}

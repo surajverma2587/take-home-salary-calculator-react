@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Take Home Salary Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## User Story
 
-## Available Scripts
+As a user I should be able to determine my take home salary after income tax deduction for the year tax 2021/2022 and also my new income tax deduction for the year 2022/2023 taking in to account the national personal allowance of £12,500.
 
-In the project directory, you can run:
+| Annual Salary      | 21/22 Tax % | 22/23 Tax % |
+| ------------------ | ----------- | ----------- |
+| £12,501 - £40,000  | 20%         | 18%         |
+| £40,001 - £100,000 | 40%         | 35%         |
+| above £100,000     | 45%         | 40%         |
 
-### `npm start`
+**Example for 2021/2022**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> Annual income: £50,000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Taxable income: £50,000 - £12,500 = £37,500
 
-### `npm test`
+> Tax %: 40%
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Tax: 40% of £37,500 = £15,000
 
-### `npm run build`
+> Take home salary: £50,000 - £15,000 = **£35,000**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Example for 2022/2023**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Annual income: £50,000
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> Taxable income: £50,000 - £12,500 = £37,500
 
-### `npm run eject`
+> Tax %: 35%
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> Tax: 35% of £37,500 = £13,125
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> Take home salary: £50,000 - £13,125 = **£36,875**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Acceptance Criteria
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- User should be able to enter their gross salary
+- User should be able to select the tax year from a drop-down: 2021/2022 or 2022/2023
+- When the user clicks on the "Calculate" button then the results are displayed in a card with the following information:
+  - Annual Salary
+  - Taxable Income
+  - Tax Percentage
+  - Taxed Payable
+  - Take Home Salary
+- When the user clicks on the "Calculate" button without a valid gross salary then an error message must be displayed "Please complete the form!!"
 
-## Learn More
+## Technical Criteria
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Use function based components
+- Use the react hook `useState`
+- Ensure that the code follows semantic HTML structure
+- Ensure that the code is well structured in to re-useable components
+- Ensure the codebase follows the React files and folder structure
+- Deploy the react application using [GitHub pages](https://github.com/gitname/react-gh-pages)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Additional Resources
 
-### Code Splitting
+- You can use [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) as your CSS framework
+- You can choose a colour palette from [coolors](https://coolors.co/)
+- You can import [font-awesome icons](https://fontawesome.com/icons) using the [CDN](https://cdnjs.com/libraries/font-awesome)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Wireframe Guide
 
-### Analyzing the Bundle Size
+Please use this high level wireframe as a guide for your portfolio and you are free to choose your own colours and/or layout if needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+TODO
 
-### Making a Progressive Web App
+## Example Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Initial Load
 
-### Advanced Configuration
+![initial load](./on-load.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Valid Submission
 
-### Deployment
+![valid submission](./valid-submission.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Error
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![error scenario](./error.png)

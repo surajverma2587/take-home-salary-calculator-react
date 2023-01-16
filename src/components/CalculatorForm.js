@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const CalculatorForm = ({ setError }) => {
+export const CalculatorForm = ({ setError, calculate }) => {
   const [taxYear, setTaxYear] = useState("");
   const [annualSalary, setAnnualSalary] = useState();
 
@@ -17,7 +17,7 @@ export const CalculatorForm = ({ setError }) => {
 
     if (taxYear && annualSalary) {
       setError(false);
-      // calculate the take home salary
+      calculate({ taxYear, annualSalary });
     } else {
       setError(true);
     }

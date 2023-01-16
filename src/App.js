@@ -9,19 +9,6 @@ export const App = () => {
   const [error, setError] = useState(false);
   const [results, setResults] = useState();
 
-  /**
-   * 
-   * Annual income: £50,000
-
-Taxable income: £50,000 - £12,500 = £37,500
-
-Tax %: 40%
-
-Tax: 40% of £37,500 = £15,000
-
-Take home salary: £50,000 - £15,000 = £35,000 
-   */
-
   const calculate = ({ taxYear, annualSalary }) => {
     const taxableIncome = annualSalary <= 12500 ? 0 : annualSalary - 12500;
     const taxPercentage = getTaxPercentage({ taxYear, annualSalary });
